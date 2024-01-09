@@ -22,11 +22,6 @@ function sendText(chatId, text, keyBoard) {
   UrlFetchApp.fetch('https://api.telegram.org/bot' + token + '/', data);
 }
 
-
-function flatten(arrayOfArrays) {
-  return [].concat.apply([], arrayOfArrays); 
-}
-
 function doPost(e) {
 //parse user data
 var contents = JSON.parse(e.postData.contents);
